@@ -9,6 +9,25 @@
 </head>
 <body>
 
+ <!-- NAVBAR START -->
+    <nav class="navbar">
+        <div class="nav-logo">🚀 Community</div>
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contributors</a></li>
+            <li><a href="https://github.com/Jayanta2004" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+<!-- NAVBAR END -->
+
     <!-- Main heading of the website -->
     <h1>🚀 Community Hall of Fame</h1>
     <p class="subtitle">An Open Source Project built by the Community, for the Community.</p>
@@ -147,10 +166,38 @@
             <p>"Excited to contribute to open source🚀"</p>
             <a href="https://github.com/Abhijeet-980" class="card-btn" target="_blank">GitHub</a>
         </div>
-
+      
+        <div class="card">
+            <img src="images/ubanand36.jpg" alt="User Photo" class="card-img"> 
+            <h2>Anand Kumar Patel</h2>
+            <span class="role">Developer</span>
+            <p>"Coding is not just skill, it's an art of representing ideas into reality"</p>
+            <a href="https://www.linkedin.com/in/anand-kumar-patel-ba9607371/" class="card-btn" target="_blank">Linkedin</a>
+        </div>
+      
+      
         <!-- ADD YOUR NEW CARD ABOVE THIS COMMENT -->
 
     </div> <!-- End of card-container -->
+
+<!-- FOOTER START -->
+    <footer class="footer">
+        <p>© 2026 Community Hall of Fame</p>
+        <p>
+            Built with ❤️ by the Open Source Community ·
+            <a href="https://github.com/Jayanta2004" target="_blank">GitHub</a>
+        </p>
+    </footer>
+<!-- FOOTER END -->
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+    
+        hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+    </script>
 
 </body>
 </html>
