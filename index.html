@@ -27,11 +27,11 @@
             <li><a href="#">Contributors</a></li>
             <li><a href="https://github.com/Jayanta2004" target="_blank">GitHub</a></li>
         </ul>
-        
-    <button id="themeToggle" class="theme-toggle">🌙</button>
+
+        <button id="themeToggle" class="theme-toggle">🌙</button>
     </nav>
 
-<!-- NAVBAR END -->
+    <!-- NAVBAR END -->
 
     <!-- Main heading of the website -->
     <h1><span id="typewriter"></span></h1>
@@ -205,7 +205,8 @@
             <img src="images/Snehasish-tech.jpeg" alt="Snehasish Dey's Photo" class="card-img">
             <h2>Snehasish Dey</h2>
             <span class="role">Contributor</span>
-            <p>"IT student passionate about Open Source, constantly exploring new technologies and contributing to meaningful projects."</p>
+            <p>"IT student passionate about Open Source, constantly exploring new technologies and contributing to
+                meaningful projects."</p>
             <a href="https://github.com/Snehasish-tech" class="card-btn" target="_blank">GitHub</a>
         </div>
 
@@ -226,7 +227,7 @@
         </div>
 
 
-        
+
         <div class="card">
             <img src="images/arpan.jpg" alt="Arpan" class="card-img">
             <h2>Arpan Purkait</h2>
@@ -234,25 +235,35 @@
             <p>Zindegi Ek safar hai.....</p>
             <a href="https://github.com/arpanpurkait" class="card-btn" target="_blank">GitHub</a>
         </div>
-      
+
         <div class="card">
-            <img src="images/roychowdhury-arghya.png" alt="Arghya" class="card-img"> 
+            <img src="images/roychowdhury-arghya.png" alt="Arghya" class="card-img">
             <h2>Arghya RoyChowdhury</h2>
             <span class="role">Contributor</span>
-            <p>"Radhe Radhe!! This is my first Open-source Contribution , I'm really excited to be part of this community"</p>
+            <p>"Radhe Radhe!! This is my first Open-source Contribution , I'm really excited to be part of this
+                community"</p>
             <a href="https://github.com/roychowdhury-arghya" class="card-btn" target="_blank">GitHub</a>
         </div>
-      
+
         <div class="card">
-            <img src="images/user.png" alt="User Photo" class="card-img"> 
+            <img src="images/user.png" alt="User Photo" class="card-img">
             <h2>Amballa Sneha</h2>
             <span class="role">Developer</span>
             <p>"This is 1st PR in EWOC'26 "</p>
             <a href="https://github.com/Sneha-Amballa" class="card-btn" target="_blank">View Profile</a>
         </div>
-      
-      
-      <!-- ADD YOUR NEW CARD ABOVE THIS COMMENT -->
+
+        <div class="card">
+            <img src="images/krishnx21.jpg" alt="Krishna Kumar's Photo" class="card-img">
+            <h2>Krishna Kumar</h2>
+            <span class="role">Contributor</span>
+            <p>"Excited to make my first open-source contribution through ECWoC 2026"</p>
+            <a href="https://github.com/krishnx21" class="card-btn" target="_blank">GitHub</a>
+        </div>
+
+
+
+        <!-- ADD YOUR NEW CARD ABOVE THIS COMMENT -->
 
     </div> <!-- End of card-container -->
 
@@ -351,28 +362,28 @@
         });
     </script>
 
-<script>
-const toggleBtn = document.getElementById("themeToggle");
-const body = document.body;
+    <script>
+        const toggleBtn = document.getElementById("themeToggle");
+        const body = document.body;
 
-// Load saved theme
-if (localStorage.getItem("theme") === "light") {
-  body.classList.add("light-mode");
-  toggleBtn.textContent = "🌞";
-}
+        // Load saved theme
+        if (localStorage.getItem("theme") === "light") {
+            body.classList.add("light-mode");
+            toggleBtn.textContent = "🌞";
+        }
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("light-mode");
 
-  if (body.classList.contains("light-mode")) {
-    toggleBtn.textContent = "🌞";
-    localStorage.setItem("theme", "light");
-  } else {
-    toggleBtn.textContent = "🌙";
-    localStorage.setItem("theme", "dark");
-  }
-});
-</script>
+            if (body.classList.contains("light-mode")) {
+                toggleBtn.textContent = "🌞";
+                localStorage.setItem("theme", "light");
+            } else {
+                toggleBtn.textContent = "🌙";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
 
 
 
