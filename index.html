@@ -135,6 +135,10 @@
         <option value="za">Z-A</option>
         <option value="newest">Newest First</option>
     </select>
+    <button id="viewToggle" class="view-toggle-btn" aria-label="Toggle View">
+    <i class="fas fa-list"></i>
+</button>
+
 </section>
     
 
@@ -796,6 +800,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+<script>
+const viewToggle = document.getElementById("viewToggle");
+const cardContainer = document.querySelector(".card-container");
+
+viewToggle.addEventListener("click", () => {
+    cardContainer.classList.toggle("compact-view");
+
+    // Toggle icon
+    const icon = viewToggle.querySelector("i");
+    if (cardContainer.classList.contains("compact-view")) {
+        icon.classList.replace("fa-list", "fa-th-large");
+    } else {
+        icon.classList.replace("fa-th-large", "fa-list");
+    }
+});
+</script>
+
 
 </body>
 

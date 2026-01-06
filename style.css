@@ -2351,3 +2351,74 @@ html {
         justify-content: center;
     }
 }
+
+/* ===============================
+   COMPACT VIEW MODE
+   =============================== */
+
+.card-container.compact-view {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Compact card layout */
+.card-container.compact-view .card {
+    flex-direction: row;
+    align-items: center;
+    min-height: auto;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+/* Smaller image */
+.card-container.compact-view .card-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 20px 0 0;
+}
+
+/* Align content horizontally */
+.card-container.compact-view .card-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Text tweaks */
+.card-container.compact-view h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.card-container.compact-view .role {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+    margin: 6px 0;
+}
+
+.card-container.compact-view p {
+    display: none; /* hide quotes for compactness */
+}
+
+/* Button smaller */
+.card-container.compact-view .card-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    min-width: auto;
+}
+
+.view-toggle-btn {
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: 1px solid var(--border-primary);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-toggle-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    transform: scale(1.05);
+}
