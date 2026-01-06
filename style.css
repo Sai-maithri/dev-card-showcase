@@ -53,6 +53,9 @@
     /* Glass Effects */
     --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(56, 189, 248, 0.1);
+
+    --navbar-gradient-bottom: rgba(37, 62, 104, 0.65);
+    --navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================================
@@ -106,6 +109,10 @@ body.light-mode {
     /* Glass Effects */
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(2, 132, 199, 0.1);
+
+    --navbar-gradient-bottom: rgba(255, 255, 255, 0.8);
+    --navbar-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 8px rgba(0, 0, 0, 0.04);
+    --glass-border: rgba(0, 0, 0, 0.05); /* Softer border for light mode */
 }
 
 /* =========================================
@@ -155,7 +162,7 @@ body::before {
 /* =========================================
    NAVBAR STYLES
    ========================================= */
-.navbar {
+/* .navbar {
     position: sticky;
     top: 20px;
     z-index: 1000;
@@ -173,11 +180,50 @@ body::before {
     max-width: 1400px;
     margin: 0 auto 40px auto;
     transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+} */
+
+/* =========================================
+   NAVBAR STYLES (UPDATED)
+   ========================================= */
+.navbar {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    /* Use variables here so it changes with the theme */
+    background: linear-gradient(to bottom,
+            var(--glass-bg),
+            var(--navbar-gradient-bottom));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    transition: all 0.3s ease;
+    box-shadow: var(--navbar-shadow); /* Uses the new shadow variable */
 }
 
+/* Update hover to keep the shadow looking good */
 .navbar:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
+
+/* Fix for Navbar links in Light Mode */
+body.light-mode .nav-links a {
+    color: var(--text-primary);
+    font-weight: 600; /* Slightly bolder for readability */
+}
+
+body.light-mode .nav-logo {
+    color: var(--primary-color);
+}
+/* .navbar:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+} */
 
 .nav-logo {
     color: var(--primary-color);
