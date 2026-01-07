@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Projects</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="Hall of Fame (1).png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo">🚀 Community</div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+</nav>
+
+<!-- HEADER -->
+<header class="projects-header">
+    <h1>Community Projects</h1>
+    <p>
+        A collection of small projects built by contributors.  
+        Learn, explore, and get inspired 🌱
+    </p>
+</header>
+
+<!-- PROJECTS GRID -->
+<section class="projects-container">
+
+    <!-- PROJECT CARD TEMPLATE -->
+    <div class="project-card">
+        <h2>Sample Card</h2>
+        <p class="project-desc">
+            This is a sample project description. Replace this with actual project details.
+        </p>
+
+        <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+
+        <div class="project-links">
+            <a href="#" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live
+            </a>
+        </div>
+
+        <div class="project-footer">
+            <span>By</span>
+            <a href="https://github.com/Sneha-Amballa" target="_blank">Amballa Sneha</a>
+        </div>
+    </div>
+    <!-- END PROJECT CARD -->
+
+    <!-- 👇 CONTRIBUTORS ADD NEW PROJECTS BELOW 👇 -->
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Community Hall of Fame</p>
+    <p>Built with ❤️ by the Open Source Community</p>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
